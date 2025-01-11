@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'SuperTheory'; /*a name to be used later*/
+    src: url('../../assets/SuperTheory.ttf'); /*URL to font*/
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 1.5em;
+    color: #520407;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #FC5A2B;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#arrow{
+    width: 5vw;
+    margin: 25px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#arrow:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+#hud{
+    background-image: url("../../assets/vert_screen.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 100;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+#homeContainer{
+    display: flex;
+    justify-content:space-evenly;
+    overflow: hidden;
+}
+
+#homeVideoContainer{
+    height: 99vh;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 800px;
+    border-right: 35px #EEC707 solid;
+    border-bottom: 5px #EEC707 solid;
+    width: 65vw;
+}
+
+#homeVideoContainer video{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+#homeContent {
+    width: 35vw;
+    height: 100vh;
+    background-color: (0,0,0,0.5);
+}
+
+#homeTitle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#homeTitle h1{
+    font-size: 4vw;
+    color: #000000;
+    margin-bottom: 0;
+    text-align: left;
+}
+#homeTitle h2{
+    font-size: 3.5vw;
+    margin-top:0;
+    text-align: left;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.8px;
+    letter-spacing: 2px;
+}
+#homeContent h3{
+    font-size: 6vw;
+    color: #000000;
+    margin: 5vh;    
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+#homeContent h3:hover{
+    color: #EEC707;
+    transition: all 0.2s;
+    text-shadow: 3px 3px 0px #000000;
+}
+
+#homeContent h3::before{
+    content: ">";
+    opacity: 0;
+    position: relative;
+    right: 10px;
+    color: #000000;
+    margin-right: 10px;
+    transition: all 0.2s;
+    text-shadow: 3px 3px 0px #000000;
+}
+
+#homeContent h3:hover::before{
+    content: ">";
+    opacity: 1;
+    position: relative;
+    right: 0px;
+    color: #EEC707;
+    margin-right: 10px;
+    transition: all 0.2s;
+    text-shadow: 3px 3px 0px #000000;
+}
